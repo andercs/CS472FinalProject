@@ -14,7 +14,6 @@ public class Board {
     private List<CellCollection> columns;
     private List<CellCollection> regions;
 
-
     public Board(int size){
         this.size = size;
         this.sizeRoot = (int)Math.sqrt(size);
@@ -55,12 +54,6 @@ public class Board {
 
     public List<CellCollection> getRows() {
         return rows;
-    }
-
-    //TODO - implement getBoard
-    public Cell[][] getBoard(){
-        Cell newBoard[][] = new Cell[9][9];
-        return  newBoard;
     }
 
 
