@@ -30,7 +30,7 @@ public class App {
 
     public static Cell[][] generateUserSudokuBoard(){
         Cell[][] newBoard = new Cell[SIZE][SIZE];
-        int cell = 0;
+        int cell;
         for(int i = 0; i < SIZE; i++){
             for(int j = 0; j < SIZE; j++){
                 cell = kbd.nextInt();
@@ -58,12 +58,6 @@ public class App {
             }
             System.out.print("\n");
         }
-    }
-
-    public static boolean isSolveable(int[][] board){
-        boolean solveable = false;
-
-        return solveable;
     }
 
     public List<Cell> generateListOfNames(Cell[][] board){
