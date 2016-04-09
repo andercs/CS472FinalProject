@@ -1,7 +1,5 @@
 package com.wvu.ai.csp.project.SudokuSolver;
 
-import com.wvu.ai.csp.project.SudokuSolver.Cell;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
