@@ -33,8 +33,9 @@ public class App {
             for(int j = 0; j < SIZE; j++){
                 cell = kbd.nextInt();
                 if(cell > 9){
-                    System.out.println("Invalid number passed in. Restarting...");
-                    generateUserSudokuBoard();
+                    System.out.println("Invalid number passed in. Restarting.");
+                    i = 0;
+                    j = 0;
                 }
                 newBoard[i][j] = new Cell(cell);
             }
