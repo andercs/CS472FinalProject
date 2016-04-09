@@ -1,5 +1,6 @@
 package com.wvu.ai.csp.project.SudokuSolver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,6 +8,21 @@ import java.util.List;
  */
 public class CellCollection {
 
-    List<Cell> collection;
+   private List<Cell> collection;
+
+    public CellCollection(){
+        collection =  new ArrayList<Cell>();
+    }
+
+    public void add(Cell newCell) {
+         collection.add(newCell);
+    }
+
+    public List<Cell> getCollection(){
+        return collection;
+    }
+
+    //TODO - override toString
+
 
 }
