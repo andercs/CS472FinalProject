@@ -11,7 +11,7 @@ public class App {
     private final static int SIZE = 9;
 
     public static void main(String[] args){
-        Cell[][] sudokoBoard;
+        Cell[][] sudokuBoard;
 
         System.out.println("Create your sudoko table by entering the cells. " +
                 "\nEnter the entire top row then hit enter." +
@@ -19,23 +19,24 @@ public class App {
                 "\nIf the cell is meant to be blank, enter a zero.");
 
         //Generate Sudoko Board
-        sudokoBoard = generateUserSudokoBoard();
+        sudokuBoard = generateUserSudokuBoard();
 
         //Print Sudoko Board
-        printBoard(sudokoBoard);
+        printBoard(sudokuBoard);
     }
 
-    public static Cell[][] generateUserSudokoBoard(){
+    public static Cell[][] generateUserSudokuBoard(){
         Cell[][] newBoard = new Cell[SIZE][SIZE];
         int cell = 0;
         Scanner kbd = new Scanner(System.in);
         for(int i = 0; i < SIZE; i++){
             for(int j = 0; j < SIZE; j++){
                 cell = kbd.nextInt();
-                newBoard[i][j] = new Cell(cell);
                 if(cell > 9){
-                    //error
+                    System.out.println("Invalid number passed in. Restarting...");
+                    generateUserSudokuBoard();
                 }
+                newBoard[i][j] = new Cell(cell);
             }
         }
         return newBoard;
