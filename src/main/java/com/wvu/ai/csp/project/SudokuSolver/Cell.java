@@ -8,14 +8,6 @@ public class Cell {
     private int value;
     private String name;
 
-    public Cell(){
-        this.value = 0;
-        this.name = "";
-    }
-    public Cell(int value){
-        this.value = value;
-    }
-
     public Cell(int value, String name){
         this.value = value;
         this.name = name;
