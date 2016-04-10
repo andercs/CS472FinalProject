@@ -8,20 +8,31 @@ import java.util.Scanner;
  * Created by Shane Hogan on 4/9/16.
  */
 public class App {
-    //TODO replace size with user input
-    private static int SIZE = 9;
+    private static int SIZE;
     static  Scanner kbd = new Scanner(System.in);
 
     public static void main(String[] args){
         Board sudokuBoard;
+        int possibleSize;
+        boolean validSize = false;
 
+        System.out.println("What size sudoku board would you like? Enter in a number that is a perfect square.\n" +
+                "The normal sudoku board is a 9 by 9 board.");
+        while(!validSize){
 
-        //TODO - Ask for board size & check that input is perfect square
-
+            possibleSize = kbd.nextInt();
+            if((long)Math.sqrt(possibleSize) * (long)Math.sqrt(possibleSize) == possibleSize){
+                SIZE = possibleSize;
+                validSize = true;
+            }else{
+                validSize = false;
+                System.out.print("That size is not a perfect square, please select a different size.\n");
+            }
+        }
 
         System.out.println("Create your sudoko table by entering the cells. " +
                 "\nEnter the entire top row then hit enter." +
-                "\nEach cell should contain only a single digit between 1-9. " +
+                "\nEach cell should contain only a digit between 1-" + SIZE + ". " +
                 "\nIf the cell is meant to be blank, enter a zero.");
         sudokuBoard = generateUserSudokuBoard();
 
