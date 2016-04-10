@@ -56,12 +56,22 @@ public class Board {
         return rows;
     }
 
-
-    //TODO
     @Override
     public String toString(){
-
-        return null;
+        String stringValue = "";
+        for(int i = 0; i < size; i++){
+            if(i%(size/sizeRoot) == 0 && i != 0){
+                stringValue += "\n";
+            }
+            for(int j = 0; j < size; j++){
+                if(j%(size/sizeRoot) == 0 && j != 0 ){
+                    stringValue += "\t";
+                }
+                stringValue += rows.get(i).getCollection().get(j).getValue() + " ";
+            }
+            stringValue += "\n";
+        }
+        return stringValue;
     }
 
 }

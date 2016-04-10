@@ -35,6 +35,7 @@ public class App {
                 "\nEach cell should contain only a digit between 1-" + SIZE + ". " +
                 "\nIf the cell is meant to be blank, enter a zero.");
         sudokuBoard = generateUserSudokuBoard();
+        System.out.print(sudokuBoard.toString());
 
     }
 

@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class CellCollection {
 
-   private List<Cell> collection;
+    private List<Cell> collection;
 
     public CellCollection(){
         collection =  new ArrayList<Cell>();
@@ -21,8 +21,6 @@ public class CellCollection {
     public List<Cell> getCollection(){
         return collection;
     }
-
-    //TODO - override toString
 
 
 }
