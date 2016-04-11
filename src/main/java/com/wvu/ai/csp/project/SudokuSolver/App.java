@@ -9,7 +9,7 @@ import java.util.Scanner;
  */
 public class App {
     private static int SIZE;
-    static  Scanner kbd = new Scanner(System.in);
+    private static Scanner KBD = new Scanner(System.in);
 
     public static void main(String[] args){
         Board sudokuBoard;
@@ -20,7 +20,7 @@ public class App {
                 "The normal sudoku board is a 9 by 9 board.");
         while(!validSize){
 
-            possibleSize = kbd.nextInt();
+            possibleSize = KBD.nextInt();
             if((long)Math.sqrt(possibleSize) * (long)Math.sqrt(possibleSize) == possibleSize){
                 SIZE = possibleSize;
                 validSize = true;
@@ -36,7 +36,7 @@ public class App {
                 "\nIf the cell is meant to be blank, enter a zero.");
         sudokuBoard = generateUserSudokuBoard();
         System.out.print(sudokuBoard.toString());
-
+        KBD.close();
     }
 
     public static Board generateUserSudokuBoard(){
@@ -45,7 +45,7 @@ public class App {
         for(int row = 0; row < SIZE; row++){
             for(int col = 0; col < SIZE; col++) {
 
-                int inputValue = kbd.nextInt();
+                int inputValue = KBD.nextInt();
 
                 if (inputValue >= 0 && inputValue <= SIZE) {
                     newBoard.addCell(inputValue, row, col);
