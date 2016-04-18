@@ -8,9 +8,14 @@ import java.util.List;
 
 public class SudokuCSP extends CSP {
 
-	private static final Object[] DOMAIN_VALUES = new Object[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+	private final Object[] domainValues;
 
 	public SudokuCSP(Board sudokuBoard) {
+		LinkedList<Object> possibleValues = new LinkedList<>();
+		for (int i = 1; i <= sudokuBoard.getSize(); i++) {
+			possibleValues.add(i);
+		}
+		domainValues = possibleValues.toArray(new Object[possibleValues.size()]);
 		loadVariables(sudokuBoard);
 		generateRowConstraints(sudokuBoard);
 		generateColumnConstraints(sudokuBoard);
@@ -25,7 +30,7 @@ public class SudokuCSP extends CSP {
 				if (cell.isAssigned()) {
 					setDomain(newVariable, new Domain(new Object[]{}));
 				} else {
-					setDomain(newVariable, new Domain(DOMAIN_VALUES));
+					setDomain(newVariable, new Domain(domainValues));
 				}
 			}
 		}
