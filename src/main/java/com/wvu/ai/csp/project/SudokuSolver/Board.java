@@ -16,7 +16,7 @@ public class Board {
 
     public Board(int size){
         this.size = size;
-        this.sizeRoot = (int)Math.sqrt(size);
+        sizeRoot = (int)Math.sqrt(size);
         rows = new ArrayList<CellCollection>();
         columns = new ArrayList<CellCollection>();
         regions = new ArrayList<CellCollection>();
@@ -44,17 +44,37 @@ public class Board {
         return regionRow * sizeRoot + regionCol;
     }
 
+	public int getSize() {
+		return size;
+	}
+
+	public Cell getCell(int rowNum, int colNum) {
+		return rows.get(rowNum).getCollection().get(colNum);
+	}
+
     public List<CellCollection> getRegions() {
         return regions;
     }
+
+	public CellCollection getRegion(int regionNumber) {
+		return regions.get(regionNumber);
+	}
 
     public List<CellCollection> getColumns() {
         return columns;
     }
 
+	public CellCollection getColumn(int columnNumber) {
+		return columns.get(columnNumber);
+	}
+
     public List<CellCollection> getRows() {
         return rows;
     }
+
+	public CellCollection getRow(int rowNumber) {
+		return rows.get(rowNumber);
+	}
 
     @Override
     public String toString(){
