@@ -63,9 +63,11 @@ public class SudokuCSP extends CSP {
 			for (int j = 0; j < sudokuBoardSideSize; j += sudokuRegionSideSize) {
 				List<Variable> regionVariables = new LinkedList<>();
 				int verticalIteration = 0;
-				for (int rowNum = i; ((rowNum / sudokuBoardSideSize) - (sudokuRegionSideSize * verticalIteration)) < sudokuRegionSideSize; rowNum += sudokuBoardSideSize) {
+				// ((rowNum / sudokuBoardSideSize) - (sudokuRegionSideSize * verticalIteration))
+				for (int rowNum = i; verticalIteration < sudokuRegionSideSize; rowNum += sudokuBoardSideSize) {
 					int horizontalIteration = 0;
-					for (int colNum = j; (colNum - (sudokuRegionSideSize * horizontalIteration)) < sudokuRegionSideSize; colNum++) {
+					// (colNum - (sudokuRegionSideSize * horizontalIteration))
+					for (int colNum = j; horizontalIteration < sudokuRegionSideSize; colNum++) {
 						regionVariables.add(cellVariables.get(rowNum + colNum));
 						horizontalIteration++;
 					}
