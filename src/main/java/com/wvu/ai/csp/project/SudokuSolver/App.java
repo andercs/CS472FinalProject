@@ -21,6 +21,7 @@ public class App {
 		int possibleSize;
 		boolean validSize = false;
 
+		System.out.println();
 		System.out.println("What size sudoku board would you like? Enter in a number that is a perfect square.\n"
 				+ "For example, the normal sudoku board is a 9 by 9 board, so you would enter the number '9'.");
 		while (!validSize) {
@@ -35,6 +36,7 @@ public class App {
 			}
 		}
 
+		System.out.println();
 		System.out.println("Create your sudoku table by entering the cells. " + "\nEnter the entire top row then hit enter." + "\nEach cell should contain only a digit between 1-"
 				+ SIZE + ". " + "\nIf the cell is meant to be blank, enter a zero.");
 		sudokuBoard = generateUserSudokuBoard();

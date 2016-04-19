@@ -33,12 +33,28 @@ Instructions to build
     1. Navigate to the root of the project directory.
     2. Use the build tool, Apache Maven, in the root directory to first
         install the jar file provided in lib.
-        - Ex. mvn install:install-file -Dfile=lib/aima-core.jar 
+        - Ex. mvn install:install-file -Dfile=lib/aima-core-0.11.1.jar 
               -DgroupId=com.aima.custom -DartifactId=aima-core 
               -Dversion=0.11.1 -Dpackaging=jar
     3. Run Maven in the root directory to package the project and ensure it
         builds successfully.
         - Ex. mvn package
+
+-------------------
+Instructions to run
+-------------------
+    Option 1
+        1. Navigate to the root of the project directory.
+        2. Use the build tool, Apache Maven, in the root directory to run the
+           program.
+            - Ex: mvn exec:java 
+                  -Dexec.mainClass="com.wvu.ai.csp.project.SudokuSolver.App"
+
+    Option 2
+        1. Follow the instructions to build the project as specified above.
+        2. Navigate to the "/target" directory, under the root
+           directory.
+        3. Use "java -jar SudokuSolver.jar"
 
 -------
 License
