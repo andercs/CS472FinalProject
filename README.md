@@ -55,3 +55,14 @@ Special Notes
     MIT License and the instructions specified at, respectively:
         https://github.com/aimacode/aima-java/blob/AIMA3e/LICENCE.md
         https://github.com/aimacode/aima-java/wiki/AIMA3e-Workspace-Setup
+
+--------------------
+Example Sudoku Input
+--------------------
+    Easy Puzzle: 0 2 0 1 7 8 0 3 0 0 4 0 3 0 2 0 9 0 1 0 0 0 0 0 0 0 6 0 0 8 6
+    0 3 5 0 0 3 0 0 0 0 0 0 0 4 0 0 6 7 0 9 2 0 0 9 0 0 0 0 0 0 0 2 0 8 0 9 0 
+    1 0 6 0 0 1 0 4 3 6 0 5 0
+
+    Hard Puzzle: 0 1 0 0 0 3 5 0 0 0 0 0 0 0 0 1 0 0 0 0 4 0 8 0 0 0 0 5 4 0 6
+    0 0 0 0 0 0 0 2 0 0 0 0 9 0 6 7 0 0 2 0 0 0 3 0 2 0 0 0 0 0 0 0 0 0 0 5 0
+    0 0 0 8 0 0 0 4 7 6 0 2 9
